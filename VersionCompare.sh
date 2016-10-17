@@ -6,7 +6,7 @@ if [[ $1 == $2 ]];then
 fi
 IFS=.
 i ver1=($1) ver2=($2)
-for ((i=${#ver1[@]}; i<${#ver2[@]}; i++));do
+for ((i=${#ver1[@]};i<${#ver2[@]}; i++));do
     ver1[i]=0
 done
 for ((i=0; i<${#ver1[@]}; i++));do
@@ -20,4 +20,3 @@ for ((i=0; i<${#ver1[@]}; i++));do
         exit 2
     fi
 done
-exit
